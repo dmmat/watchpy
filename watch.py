@@ -114,10 +114,10 @@ project link: https://gist.github.com/dmmat/22d228856ef9de7957c9fb5aea2780be
 
 
 if __name__ == "__main__":
-    if (len(sys.argv) > 1):
-        if (sys.argv[1] == "upgrade"):
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "upgrade":
             upgrade()
-        elif (sys.argv[1] == "help" or sys.argv[1] == "--help"):
+        elif sys.argv[1] == "help" or sys.argv[1] == "--help":
             print_help()
         else:
             main()

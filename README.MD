@@ -1,8 +1,23 @@
-#instalation
+# Installation
 
+## auto 
 ```
 \curl -sSL https://raw.githubusercontent.com/dmmat/watch.py/master/install_watchpy.sh | bash -s stable
 ```
+
+## manual 
+
+* download [watch.py](https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py)  to home or run directory 
+
+* make executable run 
+
+    ``` 
+    $ chmod + x watch.py 
+    $ ./watch.py
+    ```
+
+
+# Usage
 
 for torrent watch install [vlc](https://www.videolan.org/vlc/#download) and [peerflix](https://www.npmjs.com/package/peerflix)
 
@@ -17,12 +32,6 @@ $ python3 watch.py
 > Please enter url: 
 ```
 
-
-to make executable run 
-``` 
-$ chmod + x watch.py 
-$ ./watch.py
-```
 
 supported additional params like ```--incognito```
 
