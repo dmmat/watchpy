@@ -9,9 +9,9 @@ import json
 
 
 def main():
-    link = sys.argv[1] if len(sys.argv) > 1 and url_valid(sys.argv[1]) else enter_url(True)
+    link = sys.argv[1] if len(sys.argv) > 1 and url_valid(sys.argv[1]) else enter_url()
     additional_params = sys.argv[2] if len(sys.argv) > 2 else ""
-    params = ["google-chrome-stable"];
+    params = ["google-chrome-stable"]
     if "youtu.be/" in link:
         link = "https://www.youtube.com/embed/%s" % re.search(r"(?<=\.be/).*", link).group()
         link = re.sub(r"(&.+)$", '', link)
@@ -20,9 +20,9 @@ def main():
         link = re.sub(r"(&.+)$", '', link)
     elif "kinofuxy.tv" in link:
         document = http_get(link)
-        link = re.search(r"(\<meta\ property=\"og:video\"\ content=\")(.*)(\".)", document).group(2)
+        link = re.search(r"(<meta property=\"og:video\" content=\")(.*)(\".)", document).group(2)
     elif "uafilm.tv" in link:
-        link = "http://uafilm.tv/embed/%s/" % re.search(r"(uafilm\.tv\/)(\d+)(\-)", link).group(2)
+        link = "http://uafilm.tv/embed/%s/" % re.search(r"(uafilm\.tv/)(\d+)(-)", link).group(2)
     elif "twitch.tv/" in link:
         link = "https://player.twitch.tv/?channel=%s" % re.search(r"(?<=\.tv/).*", link).group()
     elif "view_video.php" in link:  # =) for hub site
@@ -33,10 +33,10 @@ def main():
         return call(["peerflix", "%s" % link, "--vlc", "-l"])
     elif "fanserials." in link:
         document = http_get(link)
-        links = json.loads(re.search(r"(playerData\ \=.')(\[.*\])(\';)", document).group(2))
+        links = json.loads(re.search(r"(playerData =.')(\[.*\])(\';)", document).group(2))
         for idx, t_link in enumerate(links):
             index = idx + 1
-            if (t_link['name'] != "Альтернативный плеер"):
+            if t_link['name'] != "Альтернативный плеер":
                 print(("[%d] " % index) + t_link.get('name'))
         link_number = input("enter number: ")
         link = links[int(link_number) - 1]['player']
@@ -58,7 +58,7 @@ def upgrade():
     print("upgrading done")
 
 
-def enter_url(first=False):
+def enter_url():
     link = input("Please enter url: ")
     return link if url_valid(link) else enter_url()
 
@@ -79,7 +79,7 @@ def url_valid(url):
 
 
 def http_get(url):
-    parsed_url = urlparse(url);
+    parsed_url = urlparse(url)
     if parsed_url.scheme == 'http':
         conn = http.client.HTTPConnection(parsed_url.netloc)
     else:
