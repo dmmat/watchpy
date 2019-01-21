@@ -108,7 +108,7 @@ available params:
 
     and also supported all perflix and chrome params
 
-project link: https://gist.github.com/dmmat/22d228856ef9de7957c9fb5aea2780be
+project link: https://github.com/dmmat/watch.py
 
             """)
 
