@@ -5,20 +5,16 @@ curl -o watch.py https://raw.githubusercontent.com/dmmat/watch.py/master/watch.p
 chmod +x watch.py
 
 if [ -f $HOME/.bashrc ]; then
-    if grep -Fxq 'export PATH="$PATH:$HOME/.local/share/watch_py"' $HOME/.bashrc
-    then
-        echo ""
-    else
+    if ! grep -Fxq 'export PATH="$PATH:$HOME/.local/share/watch_py"' $HOME/.bashrc; then
+        echo "add watch py to .bashrc"
         echo '# add watch py to user run' >> $HOME/.bashrc
         echo 'export PATH="$PATH:$HOME/.local/share/watch_py"' >> $HOME/.bashrc
     fi
 fi
 
 if [ -f $HOME/.zshrc ]; then
-  if grep -Fxq 'export PATH="$PATH:$HOME/.local/share/watch_py"' $HOME/.zshrc
-    then
-        echo ""
-    else
+    if ! grep -Fxq 'export PATH="$PATH:$HOME/.local/share/watch_py"' $HOME/.zshrc; then
+        echo "add watch py to .zshrc"
         echo '# add watch py to user run' >> $HOME/.zshrc
         echo 'export PATH="$PATH:$HOME/.local/share/watch_py"' >> $HOME/.zshrc
     fi
