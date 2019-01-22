@@ -11,7 +11,14 @@ import json
 def main():
     link = sys.argv[1] if len(sys.argv) > 1 and url_valid(sys.argv[1]) else enter_url()
     additional_params = sys.argv[2] if len(sys.argv) > 2 else ""
-    params = ["google-chrome-stable"]
+
+    if sys.platform == "linux" or sys.platform == "linux2":
+        params = ["google-chrome-stable"]
+    elif sys.platform == "darwin":
+        params = ["open -a /Applications/Google\ Chrome.app"]
+    elif sys.platform == "win32":
+        params = ["C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"]
+
     if "youtu.be/" in link:
         link = "https://www.youtube.com/embed/%s" % re.search(r"(?<=\.be/).*", link).group()
         link = re.sub(r"(&.+)$", '', link)
