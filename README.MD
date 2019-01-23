@@ -1,6 +1,13 @@
+### NOTE
+
+now work only in linux systems (debian, ubuntu, arch, etc)
+
+
+
 # Installation
 
 ## auto 
+
 ```
 \curl -sSL https://raw.githubusercontent.com/dmmat/watch.py/master/install_watchpy.sh | bash -s stable
 ```
