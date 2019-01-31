@@ -15,7 +15,7 @@ def main():
     if sys.platform == "linux" or sys.platform == "linux2":
         params = ["google-chrome-stable"]
     elif sys.platform == "darwin":
-        params = ["open -a /Applications/Google\ Chrome.app"]
+        params = ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]
     elif sys.platform == "win32":
         params = ["C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"]
 
