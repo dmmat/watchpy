@@ -2,9 +2,12 @@
 
 now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watch.py/releases)) 
 
+# Installation FOR WINDOWS
+
+download [watch.exe](https://github.com/dmmat/watch.py/releases/download/v1.1.beta/watch.exe) and run
 
 
-# Installation
+# Installation FOR LINUX
 
 ## auto 
 
