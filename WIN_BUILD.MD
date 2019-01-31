@@ -1,0 +1,3 @@
+``` 
+pyinstaller watch.py --onefile
+```

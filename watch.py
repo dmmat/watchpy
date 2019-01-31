@@ -51,18 +51,22 @@ def main():
     if additional_params:
         params.append(additional_params)
     print(params)
-    return call(params)
+    call(params)
+    if sys.platform == "win32":
+        windows_aot(link)
+    return True
 
 
 def upgrade():
-    print("searching last version")
-    file_path = "%s/watch.py" % sys.path[0]
-    download_link = "https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py"
-    print("downloading last version")
-    call(["wget", download_link, "-O", file_path])
-    print("seting file rules")
-    call(["chmod", "+x", file_path])
-    print("upgrading done")
+    if sys.platform == "linux" or sys.platform == "linux2":
+        print("searching last version")
+        file_path = "%s/watch.py" % sys.path[0]
+        download_link = "https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py"
+        print("downloading last version")
+        call(["wget", download_link, "-O", file_path])
+        print("seting file rules")
+        call(["chmod", "+x", file_path])
+        print("upgrading done")
 
 
 def enter_url():
@@ -95,6 +99,21 @@ def http_get(url):
 
     res = conn.getresponse()
     return res.read().decode('utf-8')
+
+
+def windows_aot(url):
+    import win32gui
+    import win32con
+    raw_html = http_get(url)
+    match = re.search('<title>(.*?)</title>', raw_html)
+    title = match.group(1) if match else url.replace('http://', '').replace('https://', '')
+    print(title)
+    while True:
+        hwnd = win32gui.FindWindow(None, title)
+        if hwnd:
+            win32gui.SetWindowPos(hwnd, win32con.HWND_NOTOPMOST, 0, 0, 600, 400, 0)
+            win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, 0, 0, 600, 400, 0)
+            break
 
 
 def print_help():
