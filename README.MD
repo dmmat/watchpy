@@ -1,6 +1,6 @@
 ### NOTE
 
-now work only in linux systems (debian, ubuntu, arch, etc)
+now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watch.py/releases)) 
 
 
 
