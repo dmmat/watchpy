@@ -1,6 +1,6 @@
 ### NOTE
 
-now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watch.py/releases)) 
+now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watch.py/releases)) and chrome browser
 
 # Installation FOR WINDOWS
 
