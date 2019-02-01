@@ -1,6 +1,3 @@
-# DEPRECATED - CHROME ADD PICTURE IN PICTURE MOD (RIGHT CLICK)
-
-
 ### NOTE
 
 now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watch.py/releases)) 
