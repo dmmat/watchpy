@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 mkdir $HOME/.local/share/watch_py
 cd $HOME/.local/share/watch_py
-curl -o watch.py https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py
-chmod +x watch.py
+curl -o watchpy https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py
+chmod +x watchpy
 
 if [[ -f $HOME/.bashrc ]]; then
     if ! grep -Fxq 'export PATH="$PATH:$HOME/.local/share/watch_py"' $HOME/.bashrc; then
