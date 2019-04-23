@@ -1,10 +1,10 @@
 ### NOTE
 
-now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watch.py/releases)) and chrome browser
+now work in linux systems (debian, ubuntu, arch, etc) and windows ([IN BETA](https://github.com/dmmat/watchpy/releases)) and chrome browser
 
 # Installation FOR WINDOWS
 
-download [watch.exe](https://github.com/dmmat/watch.py/releases/download/v1.1.beta/watch.exe) and run
+download [watch.exe](https://github.com/dmmat/watchpy/releases/download/v1.1.beta/watch.exe) and run
 
 
 # Installation FOR LINUX
@@ -12,12 +12,12 @@ download [watch.exe](https://github.com/dmmat/watch.py/releases/download/v1.1.be
 ## auto 
 
 ```
-\curl -sSL https://raw.githubusercontent.com/dmmat/watch.py/master/install_watchpy.sh | bash -s stable
+\curl -sSL https://raw.githubusercontent.com/dmmat/watchpy/master/install_watchpy.sh | bash -s stable
 ```
 
 ## manual 
 
-* download [watch.py](https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py)  to home or run directory 
+* download [watch.py](https://raw.githubusercontent.com/dmmat/watchpy/master/watch.py)  to home or run directory 
 
 * make executable run 
 
