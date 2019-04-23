@@ -49,8 +49,8 @@ def main():
 
 def upgrade():
     print("searching last version")
-    file_path = "%s/watch.py" % sys.path[0]
-    download_link = "https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py"
+    file_path = "%s/watchpy" % sys.path[0]
+    download_link = "https://raw.githubusercontent.com/dmmat/watchpy/master/watch.py"
     print("downloading last version")
     call(["wget", download_link, "-O", file_path])
     print("seting file rules")
