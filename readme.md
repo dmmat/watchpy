@@ -17,13 +17,12 @@ download [watch.exe](https://github.com/dmmat/watchpy/releases/download/v1.1.bet
 
 ## manual 
 
-* download [watch.py](https://raw.githubusercontent.com/dmmat/watchpy/master/watch.py)  to home or run directory 
+* download [install_watchpy.sh](https://raw.githubusercontent.com/dmmat/watchpy/master/install_watchpy.sh) 
 
-* make executable run 
+* run sh file
 
     ``` 
-    $ chmod + x watch.py 
-    $ ./watch.py
+    $ sh install_watchpy.sh
     ```
 
 
@@ -32,13 +31,13 @@ download [watch.exe](https://github.com/dmmat/watchpy/releases/download/v1.1.bet
 for torrent watch install [vlc](https://www.videolan.org/vlc/#download) and [peerflix](https://www.npmjs.com/package/peerflix)
 
 ```
-$ python3 watch.py https://www.youtube.com/watch?v=tO01J-M3g0U
+$ watchpy https://www.youtube.com/watch?v=tO01J-M3g0U
 ```
 
 OR 
 
 ```
-$ python3 watch.py
+$ watchpy
 > Please enter url: 
 ```
 
@@ -47,7 +46,7 @@ supported additional params like ```--incognito```
 
 ### to upgrade run:
 
-``` python3 watch.py upgrade ```
+``` watchpy upgrade ```
 
 ### supported platforms:
 
