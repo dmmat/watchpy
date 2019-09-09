@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+#
 mkdir $HOME/.local/share/watch_py
 cd $HOME/.local/share/watch_py
+#
 curl -o watchpy https://raw.githubusercontent.com/dmmat/watch.py/master/watch.py
 chmod +x watchpy
 
